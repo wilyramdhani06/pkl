@@ -1,0 +1,926 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080b10;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+  width: 100%;
+  padding: 20px 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(8, 11, 16, 0.92);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #4da3ff;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #4da3ff;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  min-height: 90vh;
+  padding: 70px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.small-title {
+  color: #4da3ff;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #4da3ff;
+}
+
+.hero-text > p:not(.small-title) {
+  color: #aeb6c2;
+
+  font-size: 16px;
+
+  max-width: 550px;
+
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 13px 24px;
+
+  background: #4da3ff;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #2588e8;
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   HERO PHOTO
+========================================================= */
+
+.hero-photo {
+  width: 100%;
+  height: 580px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.hero-photo:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.section-title > p:first-child {
+  color: #4da3ff;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+}
+
+.section-title .description {
+  color: #8f99a8;
+
+  margin-top: 10px;
+}
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+.member {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  background: #11161e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(77, 163, 255, 0.5);
+}
+
+.member img {
+  width: 75px;
+  height: 75px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid #4da3ff;
+}
+
+.member h3 {
+  font-size: 17px;
+
+  margin-bottom: 4px;
+}
+
+.member p {
+  color: #4da3ff;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   PROJECT
+========================================================= */
+
+.project-section {
+  background: #0b1017;
+}
+
+.project-card {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: #11161e;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-image {
+  height: 450px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.project-info > span {
+  color: #4da3ff;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.project-info h2 {
+  font-size: 38px;
+
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  color: #aeb6c2;
+
+  margin-bottom: 25px;
+}
+
+.project-team {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.project-team span {
+  padding: 7px 12px;
+
+  background: #1a222d;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  color: #d7dce3;
+}
+
+/* =========================================================
+   MOMENTS
+========================================================= */
+
+.gallery {
+  max-width: 1200px;
+
+  margin: auto;
+
+  columns: 3;
+
+  column-gap: 20px;
+}
+
+.photo {
+  position: relative;
+
+  display: inline-block;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  background: #11161e;
+
+  break-inside: avoid;
+}
+
+.photo img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  transition: 0.5s;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 35px 20px 20px;
+
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.photo:hover .caption {
+  opacity: 1;
+}
+
+.caption small {
+  color: #4da3ff;
+}
+
+.caption h3 {
+  font-size: 18px;
+}
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+#lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+
+  padding: 30px;
+}
+
+#lightbox img {
+  max-width: 90%;
+
+  max-height: 90%;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+#close {
+  position: absolute;
+
+  top: 25px;
+
+  right: 35px;
+
+  font-size: 45px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  text-align: center;
+
+  padding: 70px 20px;
+
+  background: #05070a;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer h2 {
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+footer h2 span {
+  color: #4da3ff;
+}
+
+footer p {
+  color: #8f99a8;
+
+  margin-bottom: 20px;
+}
+
+footer small {
+  color: #59616d;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-text > p:not(.small-title) {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .hero-photo {
+    height: 500px;
+  }
+
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 400px;
+  }
+
+  .gallery {
+    columns: 2;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+  nav {
+    padding: 17px 20px;
+
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* =====================================================
+       HERO MOBILE
+    ===================================================== */
+
+  .hero {
+    min-height: 650px;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border-radius: 0 0 25px 25px;
+
+    /*
+           FOTO UTAMA UNTUK HP
+
+           Foto yang digunakan:
+           img2/image22.jpeg
+        */
+
+    background:
+      linear-gradient(rgba(8, 11, 16, 0.58), rgba(8, 11, 16, 0.88)),
+      url("img2/image22.jpeg") center center / cover no-repeat;
+  }
+
+  /*
+       Foto yang berada di sebelah kanan
+       disembunyikan di HP karena
+       image22 sudah menjadi background.
+    */
+
+  .hero-photo {
+    display: none;
+  }
+
+  /*
+       Tulisan berada di atas foto.
+    */
+
+  .hero-text {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 100%;
+  }
+
+  .small-title {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    margin-bottom: 22px;
+  }
+
+  .hero h1 span {
+    color: #4da3ff;
+  }
+
+  .hero-text > p:not(.small-title) {
+    font-size: 14px;
+
+    color: #d0d5dc;
+
+    margin-bottom: 25px;
+  }
+
+  .button {
+    padding: 12px 20px;
+
+    font-size: 13px;
+  }
+
+  /* =====================================================
+       SECTION
+    ===================================================== */
+
+  section {
+    padding: 70px 20px;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  /* =====================================================
+       TEAM
+    ===================================================== */
+
+  .team {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .member {
+    padding: 15px;
+
+    gap: 15px;
+  }
+
+  .member img {
+    width: 65px;
+
+    height: 65px;
+  }
+
+  .member h3 {
+    font-size: 16px;
+  }
+
+  .member p {
+    font-size: 12px;
+  }
+
+  /* =====================================================
+       PROJECT
+    ===================================================== */
+
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-image {
+    height: 250px;
+  }
+
+  .project-info {
+    padding: 25px;
+  }
+
+  .project-info h2 {
+    font-size: 28px;
+  }
+
+  .project-info p {
+    font-size: 14px;
+  }
+
+  .project-team {
+    gap: 6px;
+  }
+
+  .project-team span {
+    font-size: 11px;
+
+    padding: 6px 9px;
+  }
+
+  /* =====================================================
+       MOMENTS MOBILE
+       
+       image0 sampai image23
+       bisa digeser ke samping.
+    ===================================================== */
+
+  .gallery {
+    display: flex;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    columns: unset;
+
+    gap: 15px;
+
+    padding: 5px 0 15px;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*
+       Hilangkan scrollbar Chrome / Edge
+    */
+
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo {
+    flex: 0 0 82%;
+
+    width: 82%;
+
+    margin-bottom: 0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    scroll-snap-align: center;
+
+    scroll-snap-stop: always;
+
+    position: relative;
+  }
+
+  .photo img {
+    display: block;
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+  }
+
+  /*
+       Caption selalu terlihat di HP.
+    */
+
+  .caption {
+    opacity: 1;
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 60px 20px 20px;
+
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  }
+
+  .caption small {
+    font-size: 12px;
+
+    color: #4da3ff;
+  }
+
+  .caption h3 {
+    font-size: 16px;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+  }
+
+  /* =====================================================
+       LIGHTBOX
+    ===================================================== */
+
+  #lightbox {
+    padding: 15px;
+  }
+
+  #lightbox img {
+    max-width: 95%;
+
+    max-height: 85%;
+  }
+
+  #close {
+    top: 15px;
+
+    right: 20px;
+
+    font-size: 35px;
+  }
+
+  /* =====================================================
+       FOOTER
+    ===================================================== */
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  footer h2 {
+    font-size: 21px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  footer small {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-text > p:not(.small-title) {
+    font-size: 13px;
+  }
+
+  .photo {
+    flex: 0 0 88%;
+  }
+
+  .photo img {
+    height: 350px;
+  }
+}
